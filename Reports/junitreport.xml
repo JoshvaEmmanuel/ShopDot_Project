@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.489" tests="14" skipped="0" failures="1" errors="0">
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="To Validate the Retailer Sign up" time="0.035">
+<system-out><![CDATA[
+Given To launch the Chrome Browser and Maximise window......................passed
+When launch the URL of the ShopDot Application..............................passed
+And Complete the Signup Flows...............................................passed
+And Retailer clicks Sign Up button..........................................passed
+And ShopDot displays the screen Retailer or Brand Supplier..................passed
+And user clicks on “Retailer” and clicks on Next............................passed
+Then the Url Should Contain "retailer-onboarding" Retailer Onboarding Screen will be displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="To Check Mandatory fields validation" time="0.003">
+<system-out><![CDATA[
+Given To launch the Chrome Browser and Maximise window......................passed
+When launch the URL of the ShopDot Application..............................passed
+And The User Left  mandatory fields blank in Sign Up Screen.................passed
+Then Sign Up button in Sign Up Screen will be disabled......................passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Password has invalid format" time="0.003">
+<system-out><![CDATA[
+Given To launch the Chrome Browser and Maximise window......................passed
+When To launch the URL of the ShopDot Application and Complete the Signup Flow.passed
+And enters a password that has an invalid format............................passed
+Then error message is displayed.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Email address is already registered and verified" time="0.004">
+<system-out><![CDATA[
+Given To launch the Chrome Browser and Maximise window......................passed
+When To launch the URL of the ShopDot Application and Complete the Signup Flow.passed
+And enters an email address that is already registered and verified.........passed
+Then the error message is displayed.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Terms link" time="0.004">
+<system-out><![CDATA[
+Given To launch the Chrome Browser and Maximise window......................passed
+When To launch the URL of the ShopDot Application...........................passed
+And user clicks on the “Terms” link from the checkbox in Sign Up Screen.....passed
+Then Terms of Use Screen will be displayed on a separate tab................passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Privacy Policy link" time="0.003">
+<system-out><![CDATA[
+Given To launch the Chrome Browser and Maximise window......................passed
+When To launch the URL of the ShopDot Application...........................passed
+And user clicks on the “Privacy Policy” link from the checkbox in Sign Up Screen.passed
+Then Privacy Policy Screen will be displayed on a separate tab..............passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Sign in" time="0.012">
+<system-out><![CDATA[
+Given To launch the Chrome Browser and Maximise window......................passed
+When To launch the URL of the ShopDot Application...........................passed
+And Retailer Enters email address...........................................passed
+And Retailer Enters Password................................................passed
+Then Retailer goes directly to the Dashboard................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Email address has invalid format" time="0.006">
+<system-out><![CDATA[
+Given To launch the Chrome Browser and Maximise window......................passed
+When To launch the URL of the ShopDot Application...........................passed
+And user enters an email "gmail.com" address in invalid format..............passed
+Then the following error message is displayed below the Email Address field: “Email address must be in correct format”.passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Login when user is not yet verified" time="0.005">
+<system-out><![CDATA[
+Given Launch the URL of Shopdot.............................................passed
+When user enters email address..............................................passed
+And user enters email password..............................................passed
+And clicks on Sign In button from Login Screen..............................passed
+Then ShopDot resends the verification email to the entered email address....passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Forgot Password" time="0.003">
+<system-out><![CDATA[
+Given Launch  Shopdot URL...................................................passed
+When User clicks on Forgot Password from Login Screen.......................passed
+And Email Address Input Screen will be displayed............................passed
+And Enter Email Address in Email Input......................................passed
+And Click on the Send Email button..........................................passed
+Then displays the following message on screen: “We have sent instructions on how to change your password to your registered email”.passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Email is NOT a registered user in ShopDot" time="0.003">
+<system-out><![CDATA[
+Given Launch  Shopdot URL...................................................passed
+When User clicks on Forgot Password from Login Screen.......................passed
+And User enters his email address and clicks on Send email button from Email Address Input Screen.passed
+And ShopDot verifies that entered email address is NOT a registered email...passed
+Then displays the following message on screen...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Change Password from Link" time="0.002">
+<system-out><![CDATA[
+When User clicks on “Reset Password” link from the email sent...............passed
+And Reset Password Screen is displayed......................................passed
+And User enters mandatory fields and clicks on Confirm button from Reset Password Screen.passed
+Then ShopDot saves the new password and displays the  message on screen: “Your password is successfully changed”.passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="Passwords do not match" time="0.007">
+<system-out><![CDATA[
+When User enters mandatory fields and clicks on Confirm button from Reset Password Screen.passed
+And ShopDot verifies that the new password and confirm new password are not the same.passed
+Then ShopDot displays the error message below the Confirm New Password field: “Passwords do not match”.passed
+]]></system-out>
+</testcase>
+<testcase classname="To the Check the functionalities of the Retailer Sign up/Sign in" name="New Password requirements are not met" time="0.01">
+<failure/>
+<system-out><![CDATA[
+When User enters the new password...........................................undefined
+And ShopDot verifies that it does not meet the password requirements........skipped
+Then an error message will be displayed below the New Password field........skipped
+]]></system-out>
+</testcase>
+</testsuite>
